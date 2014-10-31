@@ -1,6 +1,6 @@
 /*
-     Name:
-     Date:
+     Name:Brittni Carter
+     Date:11/31/14
      Class & Section:  PWA1-####
      Comments: "Goal 2: JavaScript Practice"
  */

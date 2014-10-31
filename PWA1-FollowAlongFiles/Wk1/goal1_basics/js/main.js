@@ -1,7 +1,7 @@
 /*
-     Name:
-     Date:
-     Class & Section:  PWA1-####
+     Name:Brittni Carter
+     Date:11/30/14
+     Class & Section:  PWA1-1411
      Comments: "Goal 1: Review of WPF"
  */
 
