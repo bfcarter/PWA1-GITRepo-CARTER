@@ -49,71 +49,102 @@
     - legal   var name007;
 */
 // variables
-console.log('------ variables ----------');
+//console.log('------ variables ----------');
 
     //example 1: variables defined properly
-
-
+//var name = "james";
+//var course = "PWA1";
+//var month = 3;
+//console.log ("name:",name + "/ course ", course +" / month: ", month)
     //example 2: variables not defined will = "undefined"
-
+//var name,course,month; ("name:",name + "/ course ", course +" / month: ", month)
 
     //example 3: a mix of variables defined and not defined
-
-
+//var name, course = "PWA1", month
+//console.log ("name:",name + "/ course ", course +" / month: ", month)
     //example 4: declaring multiple variables at once w/ same value
-
-
+//var a = b = c = d = 10;
+//console.log ("a:",a +" /b:",b+"/c"+"/d:",d);
 
 // string (definition, concatenation, escape character)
-console.log('------ strings ----------');
-
+//console.log('------ strings ----------');
+//var name + "James Bond";
+//console.log(name);
     //basic string
 
-
+//var testString = "He's in PWA1";
+//console.log("Example 1: ", testString)
     //string w/ escape characters " \ "
-
-
+//var testString + "I need some \ "quotes\" to be here."
+//console.log("Example 2: ", testString);
+//var testString + 'He\'s in PWA1';
+//console.log("Example 3: ", testString);
     //string w/ escape characters and mixed single/double quotes
-
+//var testString +'he\'s in ' + '"PWA1"';
 
     //this example shows that all the "phase" vars above were overwritten
-
-
+//var num + 3;
+//var testString + 'he\'s in PWA1' + num;
+//console.log("Example 5: ", testString);
 
 // numbers (definition, concatenation +, math, numbers & strings)
 console.log('------ numbers ----------');
-
+//var y=123e5;    //1230000
+//var z=123e-5;   //0.00123
     // arithmetic operators:  +, -, /, *, % (modulo)
-
 
     //basic math
 
+var counter = 10;
+console.log("basic math:", counter + 1);
+console.log("basic math:", counter);
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
 
+var num1 =10;
+var num2 =5;
+num1+=num2;
+console.log("+=:",num1);
 
     //increment or decrement numbers by 1 with ++ or --
+var myNum = 5;
+console.log("mynum = ", mynum);
+
+myNum++;
+console.log("myNum = ",myNum);
+
+myNum--;
+console.log("myNum =",myNum);
 
     //this decrements right before it is being used
-
+var num =10;
+--num;
+console.log("--counter:",num);
     //this decrements after it is used
-
+//num--;
+//console.log("counter:",num);
     //comment out the above example
     //this decrements after it is being used as well
-
+console.log("counter--:",num--);
 
     //add a number to a string is always a string
+var myStr= "6" + 2;
+console.log("Number + Strings: ", myStr);
 
 
     //other math operations will result in a number
-
+var myStr = "6" /2;
+console.log("Number + Strings: ", myStr);
 
     //order of operations: ( ), *, /, +, -
-
+var num = 4+(6*5-10)/5;
+console.log("order of operations:", num);
 
     //modulo example
-
+var num1 = 10;
+var num2 = 3;
+console.log ("remainder:",num1%num2);
 
 // arrays: (definition, indexing, getter/setter)
 console.log('------ arrays ----------');
@@ -204,6 +235,8 @@ console.log('------ conditionals ----------');
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
 
+var myVar = 5>3;
+console.log("is 5 greater then 3:",myVar);
 
 
 /*
@@ -220,7 +253,9 @@ console.log('------ conditionals ----------');
             //block of code or ‘actions’
          };
 */
-
+if (5>3){
+    console.log("5>3:',True!");
+};
 
 
 /*
@@ -235,7 +270,12 @@ console.log('------ conditionals ----------');
 
     // == performs a loose check of two values
 
-
+if("1"==1){
+    console.log("1'==1,True");
+}
+if("1"===1){
+    console.log("1'===1,False");
+}
 
 /* ==============================================================
     if - else statements (allows only for one option)
@@ -248,7 +288,13 @@ console.log('------ conditionals ----------');
 
  ================================================================
  */
-
+if ("a"<"b"){
+    //true:run code
+    console.log("a is less than b");
+}else{
+    //false: run code
+    console.log("if-else: the 'IF' statement is false");
+}
 
 
     //if - else if - else (allows for multiple options)
