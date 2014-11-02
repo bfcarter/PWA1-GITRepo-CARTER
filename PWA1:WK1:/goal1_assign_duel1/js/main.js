@@ -24,6 +24,10 @@ Assignment: Goal1: Assignment: Duel1
 
     function fight() {
         console.log('in the fight function');
+        alert(playerOneName+":"+playerOneHealth+"START"+playerTwoName+":"+playerTwoHealth);
+        for(var i=0;i < 10; i++){
+            console.log(i);
+        }
         winnerCheck()
     }
     function winnerCheck(){}
