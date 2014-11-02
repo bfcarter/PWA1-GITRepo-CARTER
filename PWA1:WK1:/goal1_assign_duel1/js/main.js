@@ -9,8 +9,8 @@ Assignment: Goal1: Assignment: Duel1
 
     console.log("FIGHT");
     //Player Name
-    var playerOneName = "Spiderman";
-    var playerTwoName = "Batman";
+    var playerOneName = "Maskman";
+    var playerTwoName = "Paleman";
 
     //player damage
     var player1Damage = 20;
@@ -23,9 +23,11 @@ Assignment: Goal1: Assignment: Duel1
     var round=1;
 
     function fight() {
-        
-    };
-    function winnerCheck(){};
+        console.log('in the fight function');
+        winnerCheck()
+    }
+    function winnerCheck(){}
+    console.log('program starts');
     fight();
 
 });
