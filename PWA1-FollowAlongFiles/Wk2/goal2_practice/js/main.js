@@ -251,7 +251,7 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 // indexOf()
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
-
+console.log(arr2.indexOf('c'));
 
 // join()
 // Joins all elements of an array into a string.
@@ -303,8 +303,19 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined;
 
+var combined = firstQtr.concat(secondQtr);
+    console.log("Concat 2 arrays:",combined);
+
+    var combined = firstQtr.concat(secondQtr,secondHalfYr);
+    console.log("Concat 2 arrays:",combined);
+
+    console.log("joined arrays:",combined.join());
+
+    console.log("Took out -",combined.pop());
+    console.log("Show Array:",combined);
 
 /*
+
 	===============================================
 	MORE:  Operators (typeof())
 	-----------------------------------------------
