@@ -381,7 +381,19 @@ switch (fruit){
 			if no age then console.log "No answer"
 ********************************************/
 
+var age = 12
 
+    switch (age){
+        case 13:
+            console.log("Child");
+            break;
+        case 18:
+            console.log("Adult");
+            break;
+        default:
+            console.log("No Answer");
+            break;
+    }
 
 /*
 	===============================================
@@ -396,7 +408,9 @@ switch (fruit){
 
 console.log('------ MORE Functions ----------');
 
-
+var bondsCars = function(){
+    return ['Ferrari', 'lambo"]
+}
 	/* 
 		Self Executing Functions
 	
