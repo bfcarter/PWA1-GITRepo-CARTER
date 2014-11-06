@@ -36,13 +36,13 @@ Assignment: Goal1: Assignment: Duel1
             playerTwoHealth-=f2;
 
             console.log(playerOneName+":"+playerOneHealth+""+playerTwoName+":"+playerTwoHealth);
-            var results = winnerCheck();
-            console.log(results);
-            if(results ==="no winner"){
+            var result = winnerCheck();
+            console.log(result);
+            if(result ==="no winner"){
                 round++;
                 alert(playerOneName+":"+playerOneHealth+"ROUND"+round+"OVER"+playerTwoName+":"+playerTwoHealth);
             }else{
-                alert(results);
+                alert(result);
                 break;
             }
         }
@@ -50,7 +50,7 @@ Assignment: Goal1: Assignment: Duel1
     }
     function winnerCheck(){
         console.log("in winnerCheck FN");
-        var results="no winner";
+        var result="no winner";
         if(playerOneHealth<1&& playerTwoHealth<1){
             result="You Both Die";
         }else if (playerOneHealth<1){
