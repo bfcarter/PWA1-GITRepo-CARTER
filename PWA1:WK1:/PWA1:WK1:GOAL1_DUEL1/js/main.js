@@ -8,39 +8,42 @@ Assignment: Goal1: Assignment: Duel1
 (function(){
 
     console.log("FIGHT");
-    //Player Name
-    var playerOneName = "Maskman";
-    var playerTwoName = "Paleman";
 
+
+    //Player Name
+  var playerOneName = "Maskman";
+  var playerTwoName = "Paleman";
+//old code
     //player damage - max 20 taken at each round
-    var player1Damage = 20;
-    var player2Damage = 20;
+  //  var player1Damage = 20;
+    //var player2Damage = 20;
 
     //player health - start out with 100
-    var playerOneHealth = 100;
-    var playerTwoHealth = 100;
-
+    //var playerOneHealth = 100;
+    //var playerTwoHealth = 100;
+var player1=["Maskman",20,100];
+var player2=["Paleman",20,100];
     var round=1;
 
     function fight() {
 
-        alert(playerOneName+":"+playerOneHealth+"START"+playerTwoName+":"+playerTwoHealth);
+        alert(player1[0]+":"+player1[2]+"START"+player2[0]+":"+player2[2]);
         for(var i=0;i < 10; i++){
 
-            var minDamage1 = player1Damage * .5;
-            var minDamage2 = player2Damage * .5;
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
+            var minDamage1 = player1[1] * .5;
+            var minDamage2 = player2[1] * .5;
+            var f1 = Math.floor(Math.random()*(player1[1]-minDamage1)+minDamage1);
+            var f2 = Math.floor(Math.random()*(player2[1]-minDamage2)+minDamage2);
 
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            player1[2]-=f1;
+            player2[2]-=f2;
 
-            console.log(playerOneName+":"+playerOneHealth+""+playerTwoName+":"+playerTwoHealth);
+            console.log(playerOneName+":"+player1[2]+""+playerTwoName+":"+player2[2]);
             var result = winnerCheck();
             console.log(result);
             if(result ==="no winner"){
                 round++;
-                alert(playerOneName+":"+playerOneHealth+"ROUND"+round+"OVER"+playerTwoName+":"+playerTwoHealth);
+                alert(playerOneName+":"+player1[2]+"ROUND"+round+"OVER"+playerTwoName+":"+player2[2]);
             }else{
                 alert(result);
                 break;
@@ -51,11 +54,11 @@ Assignment: Goal1: Assignment: Duel1
     function winnerCheck(){
         console.log("in winnerCheck FN");
         var result="no winner";
-        if(playerOneHealth<1&& playerTwoHealth<1){
+        if(player1[1]<1&& player2[2]<1){
             result="You Both Die";
-        }else if (playerOneHealth<1){
+        }else if (player1[2]<1){
             result=playerTwoName+"WINS!!"
-        }else if (playerTwoHealth<1){
+        }else if (player2[2]<1){
             result =playerOneName+"WINS!!"
         }
         return result;
