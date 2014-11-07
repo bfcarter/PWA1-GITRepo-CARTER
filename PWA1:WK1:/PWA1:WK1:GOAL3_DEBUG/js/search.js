@@ -20,7 +20,7 @@
 	var validate = function(query){    //var name spelled wrong - changed it. change == to =
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){                   //while loop to make sure search query is appropriate
+		while(query.charAt(0) === " "){                   //while loop to make sure search query is appropriate - added ==
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === "") {    //while loop
@@ -132,4 +132,4 @@
         return false; // the function is false
     };              // add curly brace
 
-})();   //unneeded pieces
+})();
