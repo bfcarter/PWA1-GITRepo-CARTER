@@ -43,34 +43,38 @@
 	// Finds search matches
 	var search = function(query){      //{ was missing from function - search function
 
+
 		// split the user's search query string into an array
-		var queryArray === query.join(" ");  //breaks down the words used for searching - searching each word - replaced = with === equal
+		var queryArray = query.join(" ");  //breaks down the words used for searching - searching each word - changed to =
 
 		// array to store matched results from database.js
 		var results = []; //the results variable
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){            //search through database for a match
+		for(var i=0, j=db.length; i<j; i++) {            //search through database for a match
 
-			// each db[i] is a single video item, each title ends with a pipe "|"
-			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|'); //end title with |
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); //lowercase video title
+            // each db[i] is a single video item, each title ends with a pipe "|"
+            // save a lowercase variable of the video title
+            var dbTitleEnd = db[i].indexOf('|'); //end title with |
+            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); //lowercase video title
 
-			// loop through the user's search query words
-			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){     //for loop for
-				var qitem = queryArray[ii].tolowercase();
+            // loop through the user's search query words
+            // save a lowercase variable of the search keyword
+            for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {     //for loop for
+                var qitem = queryArray[ii].tolowercase();
 
-				// is the keyword anywhere in the video title?
-				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem); //search keywords in the title of video
-				                                        // then push to results
-				if(compare !== -1){                 // if loop to compare results
-					results.push(db[i]);            //results from database if matches for keywords
-				};
-			;
-		;
+                // is the keyword anywhere in the video title?
+                // If a match is found, push full db[i] into results array
+                var compare = dbitem.indexOf(qitem); //search keywords in the title of video
+                // then push to results
+                if (compare !== -1) {                 // if loop to compare results
+                    results.push(db[i]);            //results from database if matches for keywords
+                };
+
+
+            };
+
+        };
 
 		results.sort();
 
