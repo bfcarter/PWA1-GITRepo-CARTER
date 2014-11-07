@@ -105,8 +105,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="536" />
-    <option name="y" value="148" />
+    <option name="x" value="379" />
+    <option name="y" value="141" />
     <option name="width" value="861" />
     <option name="height" value="567" />
   </component>
@@ -246,7 +246,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PWA1-FollowAlongFiles/Wk2/goal2_practice/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PWA1:WK2/PWA1:WK2:GOAL2_DUEL2/js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
   </component>
@@ -304,8 +304,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="536" y="148" width="861" height="567" extended-state="0" />
-    <editor active="true" />
+    <frame x="379" y="141" width="861" height="567" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
