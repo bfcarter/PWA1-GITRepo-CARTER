@@ -18,14 +18,14 @@ Assignment: Goal1: Assignment: Duel2
 //array of objects
     var fighters = [
         {
-            name:"Maskman"       //index0.name
-            damage:20            //index0.damage
+            name:"Maskman",       //index0.name
+            damage:20,            //index0.damage
             health:100           //index0.health
 
         },
         {
-            name: "Paleman"      //index1.name
-            damage:20            //index1.damage
+            name: "Paleman",      //index1.name
+            damage:20,            //index1.damage
             health: 100          //index1.damage
         }
     ];
@@ -41,8 +41,8 @@ var round =1;
     //player health - start out with 100
     //var playerOneHealth = 100;
     //var playerTwoHealth = 100;
-var player1=["Maskman",20,100]; //added health and damage to arrays
-var player2=["Paleman",20,100];
+//var player1=["Maskman",20,100]; //added health and damage to arrays
+//var player2=["Paleman",20,100];
    // var round=1;
 
     round_txt.innerHTML ="Click fight button to start!";
@@ -88,28 +88,34 @@ var player2=["Paleman",20,100];
      round++;
          if(result ==="no winner"){
                 //round++;
-
+            fighter1_txt.innerHTML=fighters[0].name=":"+fighters[0].health;
+             fighter2_txt.innerHTML=fighters[1].name=":"+fighters[1].health;
                 //alert(playerOneName+":"+player1[2]+"ROUND"+round+"OVER"+playerTwoName+":"+player2[2]); //alert that the round is over and the health of the players
             }else{
-                alert(result);  //alert round results
-                break; //end function
+               // alert(result);  //alert round results
+                //break; //end function
+             fighter1_txt.innerHTML=result;
+             fighter2_txt.innerHTML="";
+
+             button.removeEventListener("click",fight,false);
+
+             document.querySelector("buttonblue").innerHTML='over!!';
             }
-        }
+
 
     }
     function winnerCheck(){
-        console.log("in winnerCheck FN");
+        //console.log("in winnerCheck FN");
         var result="no winner";
-        if(player1[2]<1&& player2[2]<1){
-            result="You Both Die";
-        }else if (player1[2]<1){
-            result=playerTwoName+"WINS!!"; //if player1's health is the lowest then player2 wins
-        }else if (player2[2]<1){
-            result =playerOneName+"WINS!!";//if player2's health is the lowest then player2 wins
+        if(fighters[0].health<1&&fighters[1].health<1){
+            result="Both fighters Die";
+        }else if (fighters[0].health<1){
+            result=fighters[1].name+"WINS!!"; //if player1's health is the lowest then player2 wins
+        }else if (fighters[1].health<1){
+            result =fighters[0].name+"WINS!!";//if player2's health is the lowest then player2 wins
         }
         return result;  //return results
     }
-    console.log('program starts');
-    fight();
+
 
 });
