@@ -45,7 +45,7 @@
 
 
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");  //breaks down the words used for searching - searching each word - changed to =
+		var queryArray = query.split(" ");  //fixed error - changed to .split
 
 		// array to store matched results from database.js
 		var results = []; //the results variable
@@ -56,12 +56,12 @@
             // each db[i] is a single video item, each title ends with a pipe "|"
             // save a lowercase variable of the video title
             var dbTitleEnd = db[i].indexOf('|'); //end title with |
-            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); //lowercase video title
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd); //correct camel casing
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
             for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {     //for loop for
-                var qitem = queryArray[ii].tolowercase();
+                var qitem = queryArray[ii].toLowerCase(); //Change to camel casing
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array

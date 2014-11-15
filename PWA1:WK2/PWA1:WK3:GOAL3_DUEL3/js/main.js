@@ -87,7 +87,7 @@ var round =1;
      round_txt.innerHTML="round #"+round+"results";
      round++;
          if(result ==="no winner"){
-
+                
             fighter1_txt.innerHTML=fighters[0].name=":"+fighters[0].health;
              fighter2_txt.innerHTML=fighters[1].name=":"+fighters[1].health;
                 //alert(playerOneName+":"+player1[2]+"ROUND"+round+"OVER"+playerTwoName+":"+player2[2]); //alert that the round is over and the health of the players
